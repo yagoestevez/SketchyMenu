@@ -3,47 +3,43 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="author" content="Yago Estévez, https://twitter.com/yagoestevez">
-  <title>Easy Webpack</title>
+  <meta name="theme-color" content="#0084ac">
+  <meta name="author" content="Yago Estévez, https//twitter.com/yagoestevez">
+  <meta name="description" content="A cute menu made for a Codepen.io challenge">
+  <meta name="keywords" content="HTML,CSS,JavaScript,svg,menu,codepen,challenge">
+  <title>Little Jorge's Menu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 
 <body>
-  <!-- BOILERPLATE CODE. REMOVE IT TO START BUILDING YOUR NEXT THING -->
-  <span class="cube cube--dark" style="width: 120px; padding-bottom: 60px;">
-    <figure class="cube__outer" style="width: 120px; height: 120px; transform: scale3d(1, 1, 1) rotateX(0deg) rotateY(450deg) rotateZ(0deg);">
-      <section class="cube__face" style="transform: rotateX(0deg) translateZ(60px); border-width: 1px;"></section>
-      <section class="cube__face" style="transform: rotateX(-90deg) translateZ(60px); border-width: 1px;"></section>
-      <section class="cube__face" style="transform: rotateX(90deg) translateZ(60px); border-width: 1px;"></section>
-      <section class="cube__face" style="transform: rotateY(-90deg) translateZ(60px); border-width: 1px;"></section>
-      <section class="cube__face" style="transform: rotateY(90deg) translateZ(60px); border-width: 1px;"></section>
-      <section class="cube__face" style="transform: rotateY(180deg) translateZ(60px); border-width: 1px;"></section>
-    </figure>
-    <figure class="cube__inner" style="width: 120px; height: 120px; transform: scale3d(0.5, 0.5, 0.5) rotateX(0deg) rotateY(-450deg) rotateZ(0deg);">
-      <section class="cube__face" style="transform: rotateX(0deg) translateZ(60px);"></section>
-      <section class="cube__face" style="transform: rotateX(-90deg) translateZ(60px);"></section>
-      <section class="cube__face" style="transform: rotateX(90deg) translateZ(60px);"></section>
-      <section class="cube__face" style="transform: rotateY(-90deg) translateZ(60px);"></section>
-      <section class="cube__face" style="transform: rotateY(90deg) translateZ(60px);"></section>
-      <section class="cube__face" style="transform: rotateY(180deg) translateZ(60px);"></section>
-    </figure>
-  </span>
-  <h1>Sweet!</h1>
-  <h2>You're finished setting up <span>Easy Webpack</span>.</h2>
-  <h3>When you're done coding, run <code>npm run build</code> to build the final code.</h3>
-  <hr />
-  <p>
-    crafted by 
-    <a href="https://twitter.com/yagoestevez"
-       target="_blank"
-       title="Link to author's Twitter profile"
-    > Yago Estévez
-    </a>
-  </p>
-  <!-- END OF BOILERPLATE CODE -->
-  
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <nav class="menu">
+    <ol>
+      <li class="menu-item"><a href="#0">Home</a></li>
+      <li class="menu-item"><a href="#0">About</a></li>
+      <li class="menu-item">
+        <a href="#0">Widgets</a>
+        <ol class="sub-menu">
+          <li class="menu-item"><a href="#0">Big Widgets</a></li>
+          <li class="menu-item"><a href="#0">Bigger Widgets</a></li>
+          <li class="menu-item"><a href="#0">Huge Widgets</a></li>
+        </ol>
+      </li>
+      <li class="menu-item">
+        <a href="#0">Kabobs</a>
+        <ol class="sub-menu">
+          <li class="menu-item"><a href="#0">Shishkabobs</a></li>
+          <li class="menu-item"><a href="#0">BBQ kabobs</a></li>
+          <li class="menu-item"><a href="#0">Summer kabobs</a></li>
+        </ol>
+      </li>
+      <li class="menu-item"><a href="#0">Contact</a></li>
+    </ol>
+  </nav>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
   <script src="bundle.js"></script>
 </body>
 

@@ -1,0 +1,112 @@
+/******************************************************************************
+  CHARACTER STYLING.
+ ******************************************************************************/
+#Sketch {
+  position          : relative;
+  width             : 100%;
+  height            : 100%;
+  display           : flex;
+  justify-content   : center;
+  align-items       : center;
+}
+
+#SVG {
+  width             : 800px;
+  height            : 800px;
+}
+
+
+#Jorge > * {
+  fill-opacity      : 1;
+  fill              : var(--light-color);
+  stroke            : var(--dark-color);
+  stroke-opacity    : 1;
+  stroke-width      : 2.5;
+  stroke-linecap    : round;
+  stroke-linejoin   : round;
+  stroke-dashoffset : 0;
+  animation         : stroke-animation 200ms linear -2s infinite forwards;
+}
+
+#Jorge-Eyes {
+  fill              : var(--dark-color);
+}
+
+#Jorge-Eyebrows {
+  fill              : var(--dark-color);
+}
+
+#Jorge-BG {
+  fill              : var(--dark-color);
+  opacity           : 0.1;
+}
+
+/******************************************************************************
+  MENU STYLING.
+ ******************************************************************************/
+#About, #Kabobs {
+  transform         : rotate(20deg);
+}
+
+#Contact, #Widgets {
+  transform         : rotate(-20deg);
+}
+
+#Widgets-SubMenu, #Kabobs-SubMenu {
+  display           : none;
+  opacity           : 0;
+  transition        : opacity 300ms;
+}
+
+#Widgets-SubMenu.showSubMenu, #Kabobs-SubMenu.showSubMenu {
+  display           : block;
+  opacity           : 1;
+}
+
+.menu-item, .menu-item-sm {
+  cursor            : pointer;
+  font-size         : 40px;
+  fill              : var(--dark-color);
+  transition        : fill 300ms;
+  stroke            : var(--dark-color);
+  stroke-width      : .5;
+  animation         : thin-stroke-animation 200ms linear -2s infinite forwards;
+}
+
+.submenu-item {
+  cursor            : pointer;
+  font-size         : 40px;
+  text-align        : center;
+  fill              : var(--dark-color);
+  text-anchor       : middle;
+}
+
+  .menu-item:hover, .menu-item-sm:hover, .submenu-item:hover {
+    fill            : var(--key-color);
+    stroke          : var(--key-color);
+  }
+
+
+/******************************************************************************
+  ANIMATION FRAMES.
+ ******************************************************************************/
+/* Irregular ink effect */
+@keyframes stroke-animation {
+  0% {
+    stroke-width    : 2.5;
+  }
+  
+  80% {
+    stroke-width    : 1.5;
+  }
+}
+
+@keyframes thin-stroke-animation {
+  0% {
+    stroke-width    : 1;
+  }
+  
+  80% {
+    stroke-width    : 0.5;
+  }
+}
