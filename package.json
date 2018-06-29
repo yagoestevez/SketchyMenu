@@ -1,7 +1,7 @@
 {
-  "name": "easy-webpack",
+  "name": "sketchy-menu",
   "version": "1.0.0",
-  "description": "This is an basic and easy to use template/recipe made for Webpack.",
+  "description": "Sketchy menu made with SVGs and SnapSVG for the animations.",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config=config/webpack.dev.js --open --host 0.0.0.0",
@@ -10,10 +10,13 @@
   },
   "author": "Yago Estévez",
   "keywords": [
-    "webpack",
-    "template",
-    "style-loader",
-    "css-loader"
+    "svg",
+    "css",
+    "javascript",
+    "snapsvg",
+    "codepen",
+    "codepenchallenge",
+    "cpc"
   ],
   "license": "MIT",
   "devDependencies": {
