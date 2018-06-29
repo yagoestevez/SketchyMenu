@@ -1,0 +1,302 @@
+@import url(https://fonts.googleapis.com/css?family=Just+Another+Hand);
+/*
+ *  Brought to you by Yago Estévez. https://twitter.com/yagoestevez
+ */
+
+/******************************************************************************
+  BASIC DOM RESET AND GLOBAL VARIABLES SET UP.
+ ******************************************************************************/
+:root,
+*,
+*:before,
+*:after {
+  padding         : 0;
+  margin          : 0;
+  -webkit-box-sizing      : border-box;
+          box-sizing      : border-box;
+}
+
+:root {
+  --light-color   : #fbfcfd;
+  --dark-color    : #0084ac;
+  --key-color     : red;
+}
+
+/******************************************************************************
+  DOM STYLING.
+ ******************************************************************************/
+html, body {
+  -webkit-box-sizing      : border-box;
+          box-sizing      : border-box;
+  height          : 100%;
+  width           : 100%;
+  display         : -webkit-box;
+  display         : -ms-flexbox;
+  display         : flex;
+  -webkit-box-pack : center;
+      -ms-flex-pack : center;
+          justify-content : center;
+  -webkit-box-align     : end;
+      -ms-flex-align     : end;
+          align-items     : flex-end; 
+  font-family     : 'Just Another Hand', cursive;
+  font-size       : 50px;
+  color           : #fbfcfd;
+  color           : var(--light-color);
+  background      : -webkit-linear-gradient(
+    top,
+    transparent,    transparent 58px,
+    #13a1cc 2px,  #13a1cc
+  );
+  background      : -o-linear-gradient(
+    top,
+    transparent,    transparent 58px,
+    #13a1cc 2px,  #13a1cc
+  );
+  background      : linear-gradient(
+    to bottom,
+    transparent,    transparent 58px,
+    #13a1cc 2px,  #13a1cc
+  );
+  background-size : 100% 60px;
+  overflow        : hidden;
+}
+ 
+body::before {
+  content         : " ";
+  position        : absolute;
+  top             : 0;
+  left            : 0;
+  height          : 100%;
+  width           : 100px;
+  border-right    : 4px double red;
+}
+
+nav {
+  display         : none;
+}
+
+a {
+  outline         : 0;
+}
+
+a#author, a#author:visited {
+  color           : #0084ac;
+  color           : var(--dark-color);
+  font-size       : 30px;
+  text-decoration : none;
+  position        : absolute;
+  right           : 20px;
+  bottom          : 30px;
+  -webkit-transition      : color 300ms;
+  -o-transition      : color 300ms;
+  transition      : color 300ms; 
+}
+
+a#author:hover, a#author:active {
+  color           : red;
+  color           : var(--key-color);
+  text-decoration : underline;
+}
+
+
+/******************************************************************************
+  MEDIA QUERIES.
+ ******************************************************************************/
+@media only screen and (max-width: 800px) {
+  #Sketch {
+    width           : 100%;
+    height          : 100%;
+    -webkit-box-align     : end;
+        -ms-flex-align     : end;
+            align-items     : flex-end;
+  }
+  #SVG {
+    width           : 100vw;
+    height          : 100vw;
+    margin-bottom   : 10px;
+  }
+  html, body {
+    background      : -webkit-linear-gradient(
+      top,
+      transparent,    transparent 29px,
+      #13a1cc 2px,  #13a1cc
+    );
+    background      : -o-linear-gradient(
+      top,
+      transparent,    transparent 29px,
+      #13a1cc 2px,  #13a1cc
+    );
+    background      : linear-gradient(
+      to bottom,
+      transparent,    transparent 29px,
+      #13a1cc 2px,  #13a1cc
+    );
+    background-size : 100% 30px;
+  }
+  body::before {
+    width           : 30px;
+  }
+  a#author, a#author:visited {
+    font-size       : 20px;
+    right           : 20px;
+    bottom          : 20px;
+  }
+}
+/******************************************************************************
+  CHARACTER STYLING.
+ ******************************************************************************/
+#Sketch {
+  position          : relative;
+  width             : 100%;
+  height            : 100%;
+  display           : -webkit-box;
+  display           : -ms-flexbox;
+  display           : flex;
+  -webkit-box-pack   : center;
+      -ms-flex-pack   : center;
+          justify-content   : center;
+  -webkit-box-align       : center;
+      -ms-flex-align       : center;
+          align-items       : center;
+}
+
+#SVG {
+  width             : 800px;
+  height            : 800px;
+}
+
+
+#Jorge > * {
+  fill-opacity      : 1;
+  fill              : var(--light-color);
+  fill              : var(--light-color);
+  stroke            : var(--dark-color);
+  stroke            : var(--dark-color);
+  stroke-opacity    : 1;
+  stroke-width      : 2.5;
+  stroke-linecap    : round;
+  stroke-linejoin   : round;
+  stroke-dashoffset : 0;
+  -webkit-animation         : stroke-animation 200ms linear -2s infinite forwards;
+          animation         : stroke-animation 200ms linear -2s infinite forwards;
+}
+
+#Jorge-Eyes {
+  fill              : var(--dark-color);
+  fill              : var(--dark-color);
+}
+
+#Jorge-Eyebrows {
+  fill              : var(--dark-color);
+  fill              : var(--dark-color);
+}
+
+#Jorge-BG {
+  fill              : var(--dark-color);
+  fill              : var(--dark-color);
+  opacity           : 0.1;
+}
+
+/******************************************************************************
+  MENU STYLING.
+ ******************************************************************************/
+#About, #Kabobs {
+  -webkit-transform         : rotate(20deg);
+      -ms-transform         : rotate(20deg);
+          transform         : rotate(20deg);
+}
+
+#Contact, #Widgets {
+  -webkit-transform         : rotate(-20deg);
+      -ms-transform         : rotate(-20deg);
+          transform         : rotate(-20deg);
+}
+
+#Widgets-SubMenu, #Kabobs-SubMenu {
+  display           : none;
+  opacity           : 0;
+  -webkit-transition        : opacity 300ms;
+  -o-transition        : opacity 300ms;
+  transition        : opacity 300ms;
+}
+
+#Widgets-SubMenu.showSubMenu, #Kabobs-SubMenu.showSubMenu {
+  display           : block;
+  opacity           : 1;
+}
+
+.menu-item, .menu-item-sm {
+  cursor            : pointer;
+  font-size         : 40px;
+  fill              : var(--dark-color);
+  fill              : var(--dark-color);
+  -webkit-transition        : fill 300ms;
+  -o-transition        : fill 300ms;
+  transition        : fill 300ms;
+  stroke            : var(--dark-color);
+  stroke            : var(--dark-color);
+  stroke-width      : .5;
+  -webkit-animation         : thin-stroke-animation 200ms linear -2s infinite forwards;
+          animation         : thin-stroke-animation 200ms linear -2s infinite forwards;
+}
+
+.submenu-item {
+  cursor            : pointer;
+  font-size         : 40px;
+  text-align        : center;
+  fill              : var(--dark-color);
+  fill              : var(--dark-color);
+  text-anchor       : middle;
+}
+
+  .menu-item:hover, .menu-item-sm:hover, .submenu-item:hover {
+    fill            : var(--key-color);
+    fill            : var(--key-color);
+    stroke          : var(--key-color);
+    stroke          : var(--key-color);
+  }
+
+
+/******************************************************************************
+  ANIMATION FRAMES.
+ ******************************************************************************/
+/* Irregular ink effect */
+@-webkit-keyframes stroke-animation {
+  0% {
+    stroke-width    : 2.5;
+  }
+  
+  80% {
+    stroke-width    : 1.5;
+  }
+}
+@keyframes stroke-animation {
+  0% {
+    stroke-width    : 2.5;
+  }
+  
+  80% {
+    stroke-width    : 1.5;
+  }
+}
+
+@-webkit-keyframes thin-stroke-animation {
+  0% {
+    stroke-width    : 1;
+  }
+  
+  80% {
+    stroke-width    : 0.5;
+  }
+}
+
+@keyframes thin-stroke-animation {
+  0% {
+    stroke-width    : 1;
+  }
+  
+  80% {
+    stroke-width    : 0.5;
+  }
+}
